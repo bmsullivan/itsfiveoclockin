@@ -1,3 +1,27 @@
-﻿@model int
+﻿@model string
 
-<h1>@Model</h1>
+@section styles
+{
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+    <style>
+        body
+        {
+            background: url(@Url.Content("~/Content/Images/" + Model.Replace(" ", "") + ".jpg")) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        h1
+        {
+            color: #fff;
+            text-align: center;
+            font-size: 70px;
+            margin-top: 400px;
+            text-shadow: 2px 2px #000000;
+            font-family: 'Droid Sans', sans-serif;
+        }
+    </style>
+}
+
+<h1>It's five o'clock in @Model</h1>

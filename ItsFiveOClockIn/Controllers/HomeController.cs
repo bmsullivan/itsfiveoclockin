@@ -10,7 +10,7 @@ namespace ItsFiveOClockIn.Controllers
         {
             var now = DateTime.Now;
 
-            var offset = 10 - now.Hour;
+            var offset = 11 - now.Hour;
 
             if (offset < -11)
             {
@@ -19,23 +19,33 @@ namespace ItsFiveOClockIn.Controllers
 
             var places = new Dictionary<int, string>()
             {
-                {-10, "Anchorage"},
-                {-9, "Whitehorse"},
+                {-11, "Pago Pago"},
+                {-10, "Honolulu"},
+                {-9, "Anchorage"},
                 {-8, "Seattle"},
                 {-7, "Phoenix"},
                 {-6, "Dallas"},
                 {-5, "New York"},
-                {-4, "Buenos Aires"},
+                {-4, "Santiago"},
                 {-3, "Rio de Janeiro"},
-                {-2, "Ponta Delgada"},
-                {-1, "Reykjavik"},
+                {-2, "Fernando de Noronha"},
+                {-1, "Ponta Delgada"},
                 {0, "Dublin"},
                 {1, "Munich"},
                 {2, "Athens"},
-                {3, ""}
+                {3, "Baghdad"},
+                {4, "Moscow"},
+                {5, "Lahore"},
+                {6, "Astana"},
+                {7, "Bangkok"},
+                {8, "Beijing"},
+                {9, "Tokyo"},
+                {10, "Sydney"},
+                {11, "Vladivostok"},
+                {12, "Auckland"}
             };
 
-            return View(offset);
+            return View("Index", "_Layout", places[offset]);
         }
     }
 }
