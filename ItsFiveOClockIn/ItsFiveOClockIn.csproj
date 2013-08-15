@@ -133,11 +133,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\Anchorage.jpg" />
+    <Content Include="Content\Images\Auckland.jpg" />
+    <Content Include="Content\Images\Dallas.jpg" />
     <Content Include="Content\Images\Dublin.jpg" />
     <Content Include="Content\Images\FernandodeNoronha.jpg" />
+    <Content Include="Content\Images\Honolulu.jpg" />
     <Content Include="Content\Images\Munich.jpg" />
+    <Content Include="Content\Images\NewYork.jpg" />
+    <Content Include="Content\Images\PagoPago.jpg" />
+    <Content Include="Content\Images\Phoenix.jpg" />
     <Content Include="Content\Images\PontaDelgada.jpg" />
     <Content Include="Content\Images\RiodeJaneiro.jpg" />
+    <Content Include="Content\Images\Santiago.jpg" />
+    <Content Include="Content\Images\Seattle.jpg" />
+    <Content Include="Content\Images\Vladivostok.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
