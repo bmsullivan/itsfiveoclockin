@@ -8,10 +8,8 @@ namespace ItsFiveOClockIn.Controllers
     {
         public ActionResult Index()
         {
-            var now = DateTime.Now;
-
-            var offset = 11 - now.Hour;
-
+            var offset = 17 + TimeZoneInfo.Local.BaseUtcOffset.Hours - DateTime.Now.Hour;
+            
             if (offset < -11)
             {
                 offset += 24;
