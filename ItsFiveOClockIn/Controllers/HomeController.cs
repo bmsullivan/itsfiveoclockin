@@ -9,6 +9,8 @@ namespace ItsFiveOClockIn.Controllers
         public ActionResult Index()
         {
             var offset = 17 + TimeZoneInfo.Local.BaseUtcOffset.Hours - DateTime.Now.Hour;
+            if (DateTime.Now.IsDaylightSavingTime())
+                offset -= 1;
             
             if (offset < -11)
             {
