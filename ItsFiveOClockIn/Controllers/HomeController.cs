@@ -35,7 +35,7 @@ namespace ItsFiveOClockIn.Controllers
                 {2, "Athens"},
                 {3, "Baghdad"},
                 {4, "Moscow"},
-                {5, "Lahore"},
+                {5, "Islamabad"},
                 {6, "Astana"},
                 {7, "Bangkok"},
                 {8, "Beijing"},
