@@ -17,6 +17,9 @@ namespace ItsFiveOClockIn.Controllers
                 offset += 24;
             }
 
+            if (offset > 12)
+                offset -= 24;
+
             var places = new Dictionary<int, string>()
             {
                 {-11, "Pago Pago"},
