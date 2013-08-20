@@ -4,10 +4,13 @@ using System.Web.Mvc;
 
 namespace ItsFiveOClockIn.Controllers
 {
+    using System.Linq;
+
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
+            var fives = TimeZoneInfo.GetSystemTimeZones().Where(t => TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, t.Id).Hour == 17);
             var offset = 16 + TimeZoneInfo.Local.BaseUtcOffset.Hours - DateTime.Now.Hour;
             if (DateTime.Now.IsDaylightSavingTime())
                 offset += 1;
@@ -47,6 +50,15 @@ namespace ItsFiveOClockIn.Controllers
                 {11, "Vladivostok"},
                 {12, "Auckland"}
             };
+
+            var zones = new Dictionary<string, List<string>>
+                            {
+                                {"E. Europe Standard Time", new List<string>{"Athens", "Tel Aviv", "Helsinki", "Minsk"}},
+                                {"Central European Standard Time", new List<string>{"Prague", "Amsterdam", "Vienna", "Madrid", "Brussels"}},
+                                {"GMT Standard Time", new List<string>{"London", "Dublin", "Algiers", "Lisbon"}},
+                                {"Greenwich Standard Time", new List<string>{"Reykjavik", "Accra"}},
+                                {"Azores Standard Time", new List<string>{"Ponta Delgada"}}
+                            };
 
             return View("Index", "_Layout", places[offset]);
         }
