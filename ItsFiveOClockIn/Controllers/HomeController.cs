@@ -51,16 +51,45 @@ namespace ItsFiveOClockIn.Controllers
                 {12, "Auckland"}
             };
 
-            var zones = new Dictionary<string, List<string>>
+            var zones = new Dictionary<string, string>
                             {
-                                {"E. Europe Standard Time", new List<string>{"Athens", "Tel Aviv", "Helsinki", "Minsk"}},
-                                {"Central European Standard Time", new List<string>{"Prague", "Amsterdam", "Vienna", "Madrid", "Brussels"}},
-                                {"GMT Standard Time", new List<string>{"London", "Dublin", "Algiers", "Lisbon"}},
-                                {"Greenwich Standard Time", new List<string>{"Reykjavik", "Accra"}},
-                                {"Azores Standard Time", new List<string>{"Ponta Delgada"}}
+                                {"UTC-11", "Pago Pago"},
+                                {"Hawaiian Standard Time", "Honolulu"},
+                                {"Alaskan Standard Time", "Anchorage"},
+                                {"Pacific Standard Time", "Seattle"},
+                                {"Mountain Standard Time", "Phoenix"},
+                                {"Central Standard Time", "Dallas"},
+                                {"Eastern Standard Time", "New York"},
+                                {"Atlantic Standard Time", "Santiago"},
+                                {"E. South America Standard Time", "Rio de Janeiro"},
+                                {"Mid-Atlantic Standard Time", "Fernando de Noronha"},
+                                {"Azores Standard Time", "Ponta Delgada"},
+                                {"GMT Standard Time", "Dublin"},
+                                {"W. Europe Standard Time", "Munich"},
+                                {"E. Europe Standard Time", "Athens"},
+                                {"Arabic Standard Time", "Baghdad"},
+                                {"Russia TZ 3 Standard Time", "Moscow"},
+                                {"Pakistan Standard Time", "Islamabad"},
+                                {"Central Asia Standard Time", "Astana"},
+                                {"SE Asia Standard Time", "Bangkok"},
+                                {"Taipei Standard Time", "Beijing"},
+                                {"Tokyo Standard Time", "Tokyo"},
+                                {"E. Australia Standard Time", "Sydney"},
+                                {"Russia TZ 10 Standard Time", "Vladivostok"},
+                                {"New Zealand Standard Time", "Auckland"}
                             };
 
-            return View("Index", "_Layout", places[offset]);
+            string city = "";
+            foreach (var timeZoneInfo in fives)
+            {
+                if (zones.ContainsKey(timeZoneInfo.StandardName))
+                {
+                    city = zones[timeZoneInfo.StandardName];
+                    break;
+                }
+            }
+
+            return View("Index", "_Layout", city);
         }
     }
 }
