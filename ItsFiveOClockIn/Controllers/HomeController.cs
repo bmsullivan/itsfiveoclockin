@@ -38,7 +38,8 @@ namespace ItsFiveOClockIn.Controllers
                                 {"E. Australia Standard Time", "Sydney"},
                                 {"Russia TZ 10 Standard Time", "Vladivostok"},
                                 {"New Zealand Standard Time", "Auckland"},
-                                {"Aleutian Standard Time", "Unalaska" }
+                                {"Aleutian Standard Time", "Unalaska" },
+                                {"Greenland Standard Time", "Nuuk" }
                             };
 
             string city = "";
