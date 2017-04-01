@@ -23,6 +23,7 @@
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -152,6 +153,7 @@
     <Content Include="Content\Images\Moscow.jpg" />
     <Content Include="Content\Images\Munich.jpg" />
     <Content Include="Content\Images\NewYork.jpg" />
+    <Content Include="Content\Images\Nuuk.jpg" />
     <Content Include="Content\Images\PagoPago.jpg" />
     <Content Include="Content\Images\Phoenix.jpg" />
     <Content Include="Content\Images\PontaDelgada.jpg" />
@@ -160,6 +162,7 @@
     <Content Include="Content\Images\Seattle.jpg" />
     <Content Include="Content\Images\Sydney.jpg" />
     <Content Include="Content\Images\Tokyo.jpg" />
+    <Content Include="Content\Images\Unalaska.jpg" />
     <Content Include="Content\Images\Vladivostok.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
